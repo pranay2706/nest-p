@@ -21,4 +21,12 @@ export class ProductService {
   async get(id: number): Promise<Product> {
     return this.productRepository.findOneBy({ id });
   }
+
+  async update(id: number, data) {
+    return this.productRepository.update(id, data);
+  }
+
+  async delete(id) {
+    return this.productRepository.delete(id);
+  }
 }

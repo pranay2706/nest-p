@@ -6,4 +6,6 @@ export declare class ProductController {
     all(): Promise<Product[]>;
     create(body: any): Promise<Product>;
     get(id: number): Promise<Product>;
+    update(id: number, data: Partial<Product>): Promise<import("typeorm").UpdateResult>;
+    delete(id: number): Promise<import("typeorm").DeleteResult>;
 }
